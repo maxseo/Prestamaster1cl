@@ -1,0 +1,252 @@
+/**
+ * 2012 - 2020 Prestashop Master
+ *
+ * MODULE Buy in 1-click
+ *
+ * @author    Prestashop Master <dev@prestashopmaster.com>
+ * @copyright Copyright (c) permanent, Prestashop Master
+ * @license   https://opensource.org/licenses/GPL-3.0  GNU General Public License version 3
+ * @version   1.0.0
+ * @link      https://www.prestashopmaster.com
+ *
+ * NOTICE OF LICENSE
+ *
+ * Don't use this module on several shops. The license provided by PrestaShop Master
+ * for all its modules is valid only once for a single shop.
+ */
+
+
+ 
+/*** Oneclick **/
+.product-quantity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+.oneClickButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 6px;
+    font-size: 16px;
+    user-select: none;
+    border-radius: 0;
+    transition: all 100ms ease;
+    border: none;
+    border-left: none;
+    height: 44px;
+}
+
+.pmoneclick_modal .close {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    border-radius: 50%;
+    color: #ff0000;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 100ms ease;
+}
+.pmoneclick_modal .close:hover {
+    font-size: 14px;
+}
+
+.pmoneclick_modal .modal-content{
+    border: none;
+}
+.pm_one_click_popup_content{
+    padding: 40px 40px 40px;
+    font-weight: 200;
+    text-align: center;
+    
+}
+.pm_one_click_popup_content_wrapper{
+    width: 100%;
+}
+.pm_one_click_popup_content_wrapper img{
+  margin:10px 0;
+}
+.oneclickPopup__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+oneclickPopup__attr{
+    display:flex;
+    flex-direction:row;
+    font-size: 16px;
+}
+.dropdown__caption {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #dde7ec;
+    border-radius: 3px;
+    padding: 15px 40px 15px 15px;
+    box-sizing: border-box;
+    background: #fff;
+    vertical-align: middle;
+    line-height: 18px;
+    font-size: 18px;
+    box-shadow: inset 0 8px 12px rgba(19,38,74,0.04), 0 5px 5px rgba(0,0,0,0.05);
+    font-family: ProximaNovaCond,sans-serif;
+    user-select: none;
+    color: #0d0c19;
+    cursor: pointer;
+}
+.pm_oneclick_phone,.pm_oneclick_name,.pm_oneclick_email,.pm_oneclick_promo_code {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #dde7ec;
+    border-radius: 3px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    vertical-align: middle;
+    line-height: 14px;
+    font-size: 14px;
+    box-shadow: inset 0 8px 12px rgba(19,38,74,0.04), 0 5px 5px rgba(0,0,0,0.05);
+    font-family: ProximaNovaCond,sans-serif;
+    color: #0d0c19;
+}
+.nonvalid{
+    border:1px solid red;
+}
+
+.send_one_click{
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    user-select: none;
+    vertical-align: top;
+    text-align: center;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+
+.additional-actions .oneClickButton{
+    width: 100%;
+    border-left:1px solid #d9d9d9;
+    border-radius: 6px;
+}
+.country_select{
+    position: absolute;
+    border: 0;
+    top: 33px;
+    left: 12px;
+    font-size: 14px;
+}
+.pm_oneclick_phone{padding: 15px 15px 15px 60px;}
+.pmoc-dropdown-wrapper{
+    position:absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 9;
+    cursor: pointer;
+    border-radius: 6px 0 0 6px;
+}
+.pmoc-dropdown-container{
+    position:relative;
+}
+.pmoc-open-dropdown{
+    font-size: 12px;
+    background: #efefef;
+    width: 51px;
+    padding: 16px 0px 18px 14px;
+    height: 44px;
+    display: block;
+}
+.pmoc-single{
+    font-size: 12px;
+    background: #efefef;
+    width: 51px;
+    padding: 16px 0px 18px 14px;
+    height: 44px;
+    display: block;
+}
+.pmoc-dropdown-header{
+    display: flex;
+    align-items: center;
+}
+.pmoc-dropdown-dropdown{
+    display:none;
+    background: #fff;
+    width: 238px;
+    padding: 6px 13px;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 1px 2px 5px rgb(0 0 0 / 10%);
+    margin: 0 0px 0 0px;
+    height: 110px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.pmoc-dropdown-dropdown::-webkit-scrollbar {
+    width: 4px
+}
+
+.pmoc-dropdown-dropdown::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 0
+}
+
+.pmoc-dropdown-dropdown::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px
+}
+.pmoc-dropdown-dropdown li{
+    line-height: 14px;
+    padding: 3px 0;
+}
+.pmoc-dropdown-dropdown li:hover{
+    background: #efefef;
+}
+.pmoc-dropdown-dropdown li .flag-wrapper{
+    min-width: 30px;
+    text-align: left;
+    display: inline-block;
+}
+.pmoc-dropdown-dropdown li span{
+    color:#525252;
+}
+.pmoc-dropdown-dropdown li i{
+    color: #cacaca;
+    font-size: 12px;
+    padding-left: 4px;
+}
+@media (min-width: 320px){
+.modal-sm {
+    max-width: 320px;
+}}
+@media (max-width: 576px){
+.modal-sm {
+    margin: 0;
+}}
+.form__row + .form__row {
+    margin-top: 20px;
+    position:relative;
+}
+.confirm-msg{
+    padding:16px;
+    text-align: center;
+}
+}
+/*** Oneclick ***/
